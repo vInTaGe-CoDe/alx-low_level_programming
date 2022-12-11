@@ -1,37 +1,36 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
- * Return: 0
-*/
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
-	int hundreds = '0';
+	int a, b, c;
 
-	for (hundreds = '0'; hundreds <= '9'; hundreds++)
+	for (a = '0'; a < '9'; a++)
 	{
-		for (tens = '0'; tens <= '9'; tens++)
-		{	
-		for (ones = '0'; ones <= '9'; ones++)
+		for (b = a + 1; b <= '9'; b++)
 		{
-		if (!((ones == tens) || (tens == hundreds)))
-	{
-			putchar(hundreds);
-			putchar(tens);
-			putchar(ones);
-		if (!(ones == '9' && hundreds == '7' && 
-			tens == '8')) /*adds commas and spaces*/
-		{
-			putchar(',');
-			putchar(' ');
+			for (c = b + 1; c <= '9'; c++)
+			{
+				if (a != b && b != c)
+				{
+					putchar(a);
+					putchar(b);
+					putchar(c);
+
+					if (a == '7' && b == '8')
+						continue;
+
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
-		}
-		}
-		}
-		}
+	}
 	putchar('\n');
 
 	return (0);
