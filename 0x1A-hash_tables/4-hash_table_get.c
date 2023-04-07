@@ -4,7 +4,7 @@
  * hash_table_get - Get the value associated with
  *                  a key in a hash table.
  * @key: The key to get the value of.
- * @ht: A pointer to the has table.
+ * @ht: A pointer to the hash table
  *
  * Return: If the key cannot be matched - NULL.
  *         Otherwise - the value associated with key in ht.
